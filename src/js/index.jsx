@@ -5,7 +5,7 @@ import { Map } from 'immutable';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
 
-import { configureHistory, configureStore } from './configureStoreAndHi    story';
+import { configureHistory, configureStore } from './configureStoreAndHistory';
 
 import Homepage from './Homepage';
 

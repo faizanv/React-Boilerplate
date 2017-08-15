@@ -16,7 +16,7 @@ const BabelLoaderConfig = {
 };
 
 module.exports = {
-  entry: ['whatwg-fetch', './src/js/index.jsx'],
+  entry: ['./src/js/index.jsx'],
   module: {
     rules: [
       {
