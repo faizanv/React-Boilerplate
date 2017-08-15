@@ -7,7 +7,7 @@ import { Router, Route } from 'react-router';
 
 import { configureHistory, configureStore } from './configureStoreAndHistory';
 
-import Homepage from './Homepage';
+import Homepage from './Homepage/containers/Homepage';
 
 const initialState = Map();
 const store = configureStore(initialState);

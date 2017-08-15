@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux-immutable';
 
 import { routerReducer } from 'react-router-redux';
+import ExampleReducer from './ExampleReducer';
 
-const rootReducer = combineReducers({
+export default combineReducers({
   routing: routerReducer,
+  example: ExampleReducer,
 });
-
-export default rootReducer;

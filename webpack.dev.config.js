@@ -1,5 +1,5 @@
 const path = require('path');
-const webapck = require('webpack');
+const webpack = require('webpack');
 const Merge = require('webpack-merge');
 const BaseConfig = require('./webpack.base.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,13 +13,17 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   title: 'Make a Snapcode &bull; Snapchat',
 });
 
+const DevEnvironmentSettings = new webpack.DefinePlugin({
+  'process.env.DEVELOPMENT': true,
+});
+
 module.exports = Merge(BaseConfig, {
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
   },
   devtool: '#source-map',
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [HtmlWebpackPluginConfig, DevEnvironmentSettings],
   devServer: {
     port: PORT,
     stats: 'minimal',
